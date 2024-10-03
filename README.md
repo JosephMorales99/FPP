@@ -18,4 +18,4 @@ Lista numerada
 _italica texto_
 ***negrita italica*** 
 
-! [ Monster] ( https://static.wikia.nocookie.net/skullgirls-es/images/4/4b/Double_ID.png/revision/latest?cb=20141226225948&path-prefix=es) 
+! [ Monster] (https://static.wikia.nocookie.net/skullgirls-es/images/4/4b/Double_ID.png/revision/latest?cb=20141226225948&path-prefix=es) 
