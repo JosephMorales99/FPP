@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+// 1.1 Realiza un código que ejecute las siguientes operaciones e imprima los resultados de ejecutar cada operación usando la instrucción cin
+	// 1) 3 + 5 * 2 / 2 – 1
+	// 2) 3 + 10 / 2 – 1
+	// 3) 3 + 5 – 1
+	// 4) 8 -1 
+	// 5) 1/3*3
+
+	//1.2 Escriba el código que pregunte al usuario por un número y escribir el resultado de la potencia del número.De la siguiente manera :
+	// ngrese un número: 4
+	// La potencia de 4 es 1 
+	
+	//1.3 Escriba un programa que pregunte al usuario por el número de yardas a convertir en metros.Recuerde que la unidad de conversión de una yarda equivale a 0.9144 metros.
+	//Ingrese las yardas: 10
+	//Número en yardas : 9.144
+	
+	//1.4 Escriba el código de un programa que pregunte que calcule la depreciación de un auto con valor de 200, 000 pesos donde se depreciará por cinco años, considerando que solo se puede depreciar el 80 % del valor original pagado por el vehículo.Imprima en consola el valor de deducción por cada año.
+	
+	//1.5 Escriba un cálculo que calcule el porcentaje de deducción de impuestos del salario mensual de 25, 000 pesos, donde este se deducirá un impuesto fijo de 900 pesos, más unaparte porcentual de 1.5 % sobre el cálculo de sueldo mensual – 900, Imprima el valor total del impuesto a deducir, y el sueldo neto que recibirá el empleado.
+
+	//1.6 Escriba el código de cada una de las siguientes operaciones en C++; por favor cree una variable con el nombre de su elección e imprima el resultado con la instrucción cout :
+	// 1) 3 * 4
+	// 2) 12 / 3
+	// 3) 12 % 3
+	// 4) 12 % 7 
+	// 5) 3 + 3.0
+	// 6) 10 / 100 
+	// 7) Potencia 3 a la 2, para esta instrucción usar
+	//i) pow(número a elevar, potencia a elevar)
+
+	// 1.7 Comparaciones. Cuál será el resultado de cada comparación y escriba el código e imprima los resultados usando la instrucción cout, NOTA: Las comparaciones encierrelas entre paréntesis.
+	// Si a = 10 y b = 20
+	//i. (a > b)
+	//ii. (a < b)
+	//iii. (a == b)
+	//iv. (a != b)
+	//v. (a + b) > 100
+	//vi. (a - b) == 0
+	//vii. (a * b) > 500
+	//viii. (a * b) < 100
+	//ix. (a - b) < 0
+	//x.a < 20
+}
