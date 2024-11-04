@@ -109,5 +109,61 @@ int main(
     //Resultado
     cout << "El precio del boleto de ida y vuelta es: $" << precioBase << endl;
 }
+// 1.20 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones:
+//a) Si un ángulo es igual a 90 grados, imprimir el mensaje "El ángulo es un ángulo recto" sino imprimir el mensaje "El ángulo no es un ángulo recto".
+int angulo;
+    cout << "Ingresa el ángulo en grados: ";
+    cin >> angulo;
 
+    if (angulo == 90) {
+        cout << "El ángulo es un ángulo recto." << endl;
+    } else {
+        cout << "El ángulo no es un ángulo recto." << endl;
+    }
+//b) Si la temperatura es superior a 100 grados, visualizar el mensaje “por encima del punto de ebullición del agua” sino visualizar el mensaje “por debajo del punto de ebullición del agua
+float temperatura;
+    cout << "Ingresa la temperatura en grados: ";
+    cin >> temperatura;
+
+    if (temperatura > 100) {
+        cout << "Por encima del punto de ebullición del agua." << endl;
+    } else {
+        cout << "Por debajo del punto de ebullición del agua." << endl;
+    }
+//c) Recibir un número, Si este número es positivo, sumar el número a total de positivos usando una variable que acumule los números negativos, sino sumar al total de negativos usando una variable que acumule los números negativos.
+ int numero;
+    int totalPositivos = 0;
+    int totalNegativos = 0;
+
+    cout << "Ingresa un número: ";
+    cin >> numero;
+
+    if (numero > 0) {
+        totalPositivos += numero; // Sumar a total de positivos
+    } else {
+        totalNegativos += numero; // Sumar a total de negativos
+    }
+
+    cout << "Total de positivos: " << totalPositivos << endl;
+    cout << "Total de negativos: " << totalNegativos << endl;
+}
+//d) Si “x” es mayor que “y”, y “z” es menor que “y”, imprimir “x”.
+int x, y, z;
+    cout << "Ingresa x, y, z: ";
+    cin >> x >> y >> z;
+
+    if (x > y && z < y) {
+        cout << "x: " << x << endl;
+    }
+//e) Si la distancia es mayor que 20 y menos que 35, crear y leer un valor para luna variable de tipo entero llamada “tiempo”.
+      int distancia;
+    cout << "Ingresa la distancia: ";
+    cin >> distancia;
+
+    if (distancia > 20 && distancia < 35) {
+        int tiempo;
+        cout << "Ingresa el tiempo: ";
+        cin >> tiempo;
+        cout << "Tiempo ingresado: " << tiempo << endl;
+    }
 )
