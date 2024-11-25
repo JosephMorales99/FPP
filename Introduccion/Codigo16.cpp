@@ -10,9 +10,9 @@ int main()
 	int mayor = -1;
 	for (int i = 0; i <= 9; i++)
 	{
-		if (vnum[i])> mayor)
+		if (vnum[i] > mayor)
 		{
-			mayor = numeros[i];
+			mayor = vnum[i];
 		}
 	}
 	cout << "El mayor es: " << mayor << endl;
