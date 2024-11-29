@@ -4,7 +4,31 @@ using namespace std;
 int main()
 {
   // 1. Ejercicio #1 Realice el programa en C++ que solicite un número e imprima el numero multiplicado por 10 y esto lo seguirá haciendo hasta que el usuario ingrese un cero. Utilice el arreglo preconstruido.
+#include <iostream>
+using namespace std;
 
+int main()
+{
+	int numeros[10];
+	int num, i = 0;
+	num = -1;
+	while (num != 0)
+	{
+		cout << "numero: ";
+		cin >> num; 
+		if (num == 0 and i > 9)
+		{
+			break;
+		}
+		numeros[i] = num; 
+		i++;
+	}
+	for (int elemento : numeros)
+	{
+		cout << elemento << endl;
+	}
+	
+}
   //2. Ejercicio #2 Realice el programa en C++ que encuentre el mayor elemento de un arreglo de tipo entero. Utilice el arreglo preconstruido
 
   //3. Ejercicio #3 Realice el programa en C++ que encuentre el menor elemento de un arreglo de tipo entero. Utilice el arreglo preconstruido.
