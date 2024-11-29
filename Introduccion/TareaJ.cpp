@@ -30,7 +30,30 @@ int main()
 	
 }
   //2. Ejercicio #2 Realice el programa en C++ que encuentre el mayor elemento de un arreglo de tipo entero. Utilice el arreglo preconstruido
+#include <iostream>
+#include <vector>
+using namespace std;
 
+int main()
+{
+	vector <int> numeros;
+	int num;
+	num = -1;
+	while (num != 0)
+	{
+		cout << "Numero: ";
+		cin >> num;
+		if (num == 0)
+		{
+			break;
+		}
+		numeros.push_back(num);
+	}
+	for (int elemento : numeros)
+	{
+		cout << elemento << endl;
+	}
+}
   //3. Ejercicio #3 Realice el programa en C++ que encuentre el menor elemento de un arreglo de tipo entero. Utilice el arreglo preconstruido.
 
   //4. Ejercicio #4 Realice el programa en C++ calcule el promedio de los elementos de un arreglo de tipo entero. Utilice el arreglo preconstruido.
