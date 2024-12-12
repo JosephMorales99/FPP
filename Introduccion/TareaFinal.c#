@@ -1,0 +1,616 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+      //PRACTICA B  
+      // 1.1 Operaciones e impresión de resultados
+        Console.WriteLine("Resultado de 3 + 5 * 2 / 2 - 1: " + (3 + 5 * 2 / 2 - 1));
+        Console.WriteLine("Resultado de 3 + 10 / 2 - 1: " + (3 + 10 / 2 - 1));
+        Console.WriteLine("Resultado de 3 + 5 - 1: " + (3 + 5 - 1));
+        Console.WriteLine("Resultado de 8 - 1: " + (8 - 1));
+        Console.WriteLine("Resultado de 1 / 3 * 3: " + (1.0 / 3 * 3));
+
+        // 1.2 Potencia del número ingresado
+        Console.Write("Ingrese un número: ");
+        double numero = double.Parse(Console.ReadLine());
+        double potencia = Math.Pow(numero, 0);
+        Console.WriteLine("La potencia de " + numero + " es " + potencia);
+
+        // 1.3 Conversión de yardas a metros
+        Console.Write("Ingrese las yardas: ");
+        double yardas = double.Parse(Console.ReadLine());
+        double metros = yardas * 0.9144;
+        Console.WriteLine("Número en yardas: " + metros);
+
+        // 1.4 Cálculo de depreciación de un auto
+        double valorOriginal = 200000.0;
+        double porcentajeDepreciacion = 0.80;
+        int anios = 5;
+        double valorDepreciable = valorOriginal * porcentajeDepreciacion;
+        double deduccionAnual = valorDepreciable / anios;
+
+        for (int anio = 1; anio <= anios; anio++)
+        {
+            Console.WriteLine("Deducción por el año " + anio + ": " + deduccionAnual + " pesos");
+        }
+
+        // 1.5 Cálculo de impuestos sobre salario
+        double salarioMensual = 25000.0;
+        double impuestoFijo = 900.0;
+        double porcentajeImpuesto = 0.015;
+        double sueldoDespuesImpuestoFijo = salarioMensual - impuestoFijo;
+        double deduccionPorcentaje = sueldoDespuesImpuestoFijo * porcentajeImpuesto;
+        double totalImpuesto = impuestoFijo + deduccionPorcentaje;
+        double sueldoNeto = salarioMensual - totalImpuesto;
+        Console.WriteLine("Total del impuesto a deducir: " + totalImpuesto + " pesos");
+        Console.WriteLine("Sueldo neto que recibirá el empleado: " + sueldoNeto + " pesos");
+
+        // 1.6 Otras operaciones matemáticas
+        Console.WriteLine("El resultado de 3 * 4 es: " + (3 * 4));
+        Console.WriteLine("El resultado de 12 / 3 es: " + (12 / 3));
+        Console.WriteLine("El resultado de 12 % 3 es: " + (12 % 3));
+        Console.WriteLine("El resultado de 12 % 7 es: " + (12 % 7));
+        Console.WriteLine("El resultado de 3 + 3.0 es: " + (3 + 3.0));
+        Console.WriteLine("El resultado de 10 / 100 es: " + (10 / 100.0));
+        Console.WriteLine("El resultado de 3 elevado a 2 es: " + Math.Pow(3, 2));
+
+        // 1.7 Comparaciones
+        int a = 10;
+        int b = 20;
+        Console.WriteLine("(a > b): " + (a > b));
+        Console.WriteLine("(a < b): " + (a < b));
+        Console.WriteLine("(a == b): " + (a == b));
+        Console.WriteLine("(a != b): " + (a != b));
+        Console.WriteLine("(a + b) > 100: " + ((a + b) > 100));
+        Console.WriteLine("(a - b) == 0: " + ((a - b) == 0));
+        Console.WriteLine("(a * b) > 500: " + ((a * b) > 500));
+        Console.WriteLine("(a * b) < 100: " + ((a * b) < 100));
+        Console.WriteLine("(a - b) < 0: " + ((a - b) < 0));
+        Console.WriteLine("(a < 20): " + (a < 20));
+    }
+}
+//PRACTICA C
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 1.1 Cuadrado de un número
+        Console.Write("Ingrese un número: ");
+        double numero = double.Parse(Console.ReadLine());
+        double cuadrado = numero * numero;
+        Console.WriteLine("El cuadrado de " + numero + " es " + cuadrado);
+
+        // 1.2 Multiplicaciones consecutivas
+        Console.Write("Ingrese un número: ");
+        int num = int.Parse(Console.ReadLine());
+        Console.WriteLine($"{num} -- {num * 2} -- {num * 3} -- {num * 4} -- {num * 5}");
+
+        // 1.3 Convertir peso de kilogramos a libras
+        Console.Write("Ingrese su peso en kilogramos: ");
+        double pesoKilogramos = double.Parse(Console.ReadLine());
+        double pesoLibras = pesoKilogramos * 2.2;
+        Console.WriteLine("Su peso en libras es: " + pesoLibras);
+
+        // 1.4 Total y promedio de tres números
+        Console.Write("Ingrese el primer número: ");
+        double num1 = double.Parse(Console.ReadLine());
+        Console.Write("Ingrese el segundo número: ");
+        double num2 = double.Parse(Console.ReadLine());
+        Console.Write("Ingrese el tercer número: ");
+        double num3 = double.Parse(Console.ReadLine());
+        double total = num1 + num2 + num3;
+        double promedio = total / 3;
+        Console.WriteLine("Total: " + total);
+        Console.WriteLine("Promedio: " + promedio);
+
+        // 1.5 Calcular propina
+        Console.Write("Ingrese el total de la cuenta: ");
+        double totalCuenta = double.Parse(Console.ReadLine());
+        Console.Write("Ingrese el porcentaje de propina a aplicar: ");
+        double porcentaje = double.Parse(Console.ReadLine());
+        double propina = (totalCuenta * porcentaje) / 100;
+        Console.WriteLine("La cantidad a dar de propina es: " + propina);
+
+        // 1.6 Comparar si un número es mayor a 100
+        Console.Write("Ingrese un número: ");
+        numero = double.Parse(Console.ReadLine());
+        if (numero > 100)
+        {
+            Console.WriteLine("El número es mayor a 100");
+        }
+        else
+        {
+            Console.WriteLine("El número es menor o igual que 100");
+        }
+
+        // 1.7 Comparar si un número es negativo o positivo
+        Console.Write("Ingrese un número: ");
+        numero = double.Parse(Console.ReadLine());
+        if (numero < 0)
+        {
+            Console.WriteLine("El número es negativo");
+        }
+        else
+        {
+            Console.WriteLine("El número es positivo");
+        }
+
+        // 1.8 Validar email y contraseña
+        Console.Write("Ingrese su email: ");
+        string Miemail = Console.ReadLine();
+        Console.Write("Ingrese su contraseña: ");
+        string Password_Ingresado = Console.ReadLine();
+        if (Password_Ingresado == "12345")
+        {
+            Console.WriteLine("Felicidades, password correcto");
+        }
+        else
+        {
+            Console.WriteLine("Su password es incorrecto");
+        }
+
+        // 1.9 Convertir Fahrenheit a Celsius
+        Console.Write("Ingrese la temperatura en grados Fahrenheit: ");
+        double Fahrenheit = double.Parse(Console.ReadLine());
+        double Celsius = (Fahrenheit - 32) * 5.0 / 9.0;
+        Console.WriteLine("La temperatura en grados Celsius es: " + Celsius);
+
+        // 1.10 Calcular masa corporal
+        Console.Write("Ingrese su peso (kg): ");
+        double peso = double.Parse(Console.ReadLine());
+        Console.Write("Ingrese su estatura (m): ");
+        double estatura = double.Parse(Console.ReadLine());
+        double mc = peso / (estatura * estatura);
+        Console.WriteLine("Índice de masa corporal: " + mc);
+        if (mc < 18.5)
+        {
+            Console.WriteLine("Tu peso es bajo");
+        }
+        else if (mc >= 18.5 && mc <= 25)
+        {
+            Console.WriteLine("Peso normal");
+        }
+        else
+        {
+            Console.WriteLine("Sobrepeso");
+        }
+    }
+}
+
+//PRACTICA D
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // 1.16 Número más grande
+        Console.WriteLine("Ingresa el primer número (A):");
+        float A = float.Parse(Console.ReadLine());
+        Console.WriteLine("Ingresa el segundo número (B):");
+        float B = float.Parse(Console.ReadLine());
+        Console.WriteLine("Ingresa el tercer número (C):");
+        float C = float.Parse(Console.ReadLine());
+
+        float maximo = A;
+        if (B > maximo) maximo = B;
+        if (C > maximo) maximo = C;
+        Console.WriteLine("El número más grande es: " + maximo);
+
+        // 1.17 Máximo y mínimo
+        float minimo = A;
+        if (B < minimo) minimo = B;
+        if (C < minimo) minimo = C;
+        Console.WriteLine("El número máximo es: " + maximo);
+        Console.WriteLine("El número mínimo es: " + minimo);
+
+        // 1.18 Calcular la hora un segundo después
+        Console.WriteLine("Ingresa la hora (HH):");
+        int HH = int.Parse(Console.ReadLine());
+        Console.WriteLine("Ingresa los minutos (MM):");
+        int MM = int.Parse(Console.ReadLine());
+        Console.WriteLine("Ingresa los segundos (SS):");
+        int SS = int.Parse(Console.ReadLine());
+
+        if (HH < 0 || HH > 23 || MM < 0 || MM > 59 || SS < 0 || SS > 59)
+        {
+            Console.WriteLine("Hora inválida. Por favor ingresa valores correctos.");
+        }
+        else
+        {
+            SS++;
+            if (SS >= 60) { SS = 0; MM++; }
+            if (MM >= 60) { MM = 0; HH++; }
+            if (HH >= 24) { HH = 0; }
+            Console.WriteLine($"La nueva hora es: {HH:D2}:{MM:D2}:{SS:D2}");
+        }
+
+        // 1.19 Precio del boleto
+        Console.WriteLine("Ingresa la distancia a recorrer (en km):");
+        float distancia = float.Parse(Console.ReadLine());
+        Console.WriteLine("Ingresa el número de días de estancia:");
+        int diasEstancia = int.Parse(Console.ReadLine());
+
+        const float precioPorKm = 2.5f;
+        float precioBase = distancia * precioPorKm * 2;
+        if (diasEstancia > 7 && distancia > 800)
+        {
+            precioBase *= 0.7f;
+        }
+        Console.WriteLine("El precio del boleto es: $" + precioBase);
+
+        // 1.20 Condiciones
+        // a) Ángulo recto
+        Console.WriteLine("Ingresa un ángulo en grados:");
+        int angulo = int.Parse(Console.ReadLine());
+        if (angulo == 90)
+        {
+            Console.WriteLine("El ángulo es un ángulo recto.");
+        }
+        else
+        {
+            Console.WriteLine("El ángulo no es un ángulo recto.");
+        }
+
+        // b) Temperatura
+        Console.WriteLine("Ingresa la temperatura:");
+        float temperatura = float.Parse(Console.ReadLine());
+        if (temperatura > 100)
+        {
+            Console.WriteLine("Por encima del punto de ebullición del agua.");
+        }
+        else
+        {
+            Console.WriteLine("Por debajo del punto de ebullición del agua.");
+        }
+
+        // c) Suma de positivos y negativos
+        Console.WriteLine("Ingresa un número:");
+        int numero = int.Parse(Console.ReadLine());
+        int totalPositivos = 0, totalNegativos = 0;
+        if (numero > 0)
+        {
+            totalPositivos += numero;
+        }
+        else
+        {
+            totalNegativos += numero;
+        }
+        Console.WriteLine("Total de positivos: " + totalPositivos);
+        Console.WriteLine("Total de negativos: " + totalNegativos);
+
+        // d) Comparación de x, y, z
+        Console.WriteLine("Ingresa x, y, z:");
+        string[] valores = Console.ReadLine().Split();
+        int x = int.Parse(valores[0]);
+        int y = int.Parse(valores[1]);
+        int z = int.Parse(valores[2]);
+        if (x > y && z < y)
+        {
+            Console.WriteLine("x: " + x);
+        }
+
+        // e) Distancia y tiempo
+        Console.WriteLine("Ingresa la distancia:");
+        distancia = float.Parse(Console.ReadLine());
+        if (distancia > 20 && distancia < 35)
+        {
+            Console.WriteLine("Ingresa el tiempo:");
+            int tiempo = int.Parse(Console.ReadLine());
+            Console.WriteLine("Tiempo ingresado: " + tiempo);
+        }
+    }
+}
+
+//PRACTICA E
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 1.21 Ciclo con do...while y opción de salida
+        string respuesta;
+        do
+        {
+            Console.Write("¿Quieres salir del ciclo? [SI/NO]: ");
+            respuesta = Console.ReadLine();
+        } while (respuesta != "SI");
+        Console.WriteLine("Has salido del ciclo.");
+
+        // 1.22 Menú de operaciones aritméticas básicas
+        char opcion;
+        int numero1, numero2, total;
+        do
+        {
+            Console.WriteLine("\nMenú de Operaciones Aritméticas:");
+            Console.WriteLine("1. Suma (+)");
+            Console.WriteLine("2. Resta (-)");
+            Console.WriteLine("3. Multiplicación (*)");
+            Console.WriteLine("4. División (/)");
+            Console.WriteLine("5. Residuo (%)");
+            Console.WriteLine("s. Salir");
+            Console.Write("Selecciona una opción: ");
+            opcion = Console.ReadLine()[0];
+
+            if (opcion == 's')
+            {
+                break;
+            }
+
+            Console.Write("Introduce el primer número: ");
+            numero1 = int.Parse(Console.ReadLine());
+            Console.Write("Introduce el segundo número: ");
+            numero2 = int.Parse(Console.ReadLine());
+
+            switch (opcion)
+            {
+                case '1':
+                    total = numero1 + numero2;
+                    Console.WriteLine("Resultado: " + total);
+                    break;
+                case '2':
+                    total = numero1 - numero2;
+                    Console.WriteLine("Resultado: " + total);
+                    break;
+                case '3':
+                    total = numero1 * numero2;
+                    Console.WriteLine("Resultado: " + total);
+                    break;
+                case '4':
+                    if (numero2 != 0)
+                    {
+                        total = numero1 / numero2;
+                        Console.WriteLine("Resultado: " + total);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: No se puede dividir por cero.");
+                    }
+                    break;
+                case '5':
+                    if (numero2 != 0)
+                    {
+                        total = numero1 % numero2;
+                        Console.WriteLine("Resultado: " + total);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: No se puede calcular el residuo con cero.");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Opción no válida. Por favor elige una opción correcta.");
+                    break;
+            }
+        } while (true);
+
+        Console.WriteLine("Has salido del programa.");
+
+        // 1.23 Simulación de cajero automático
+        string tarjeta;
+        string pin;
+        double saldo = 3450.00;
+        double retiro;
+
+        Console.Write("Por favor, inserte su tarjeta (simulada con un número): ");
+        tarjeta = Console.ReadLine();
+
+        if (tarjeta != "123456")
+        {
+            Console.WriteLine("Tarjeta inválida. Proceso terminado.");
+            return;
+        }
+
+        Console.Write("Ingrese su PIN (4 dígitos): ");
+        pin = Console.ReadLine();
+
+        if (pin.Length != 4 || pin != "1234")
+        {
+            Console.WriteLine("PIN inválido. Proceso terminado.");
+            return;
+        }
+
+        char opcionCajero;
+        do
+        {
+            Console.WriteLine("\nMenú del Cajero:");
+            Console.WriteLine("1. Retiro de efectivo");
+            Console.WriteLine("2. Consulta de saldo");
+            Console.WriteLine("3. Cancelar operación");
+            Console.Write("Seleccione una opción (1, 2 o 3): ");
+            opcionCajero = Console.ReadLine()[0];
+
+            switch (opcionCajero)
+            {
+                case '1':
+                    Console.Write("Ingrese la cantidad a retirar: ");
+                    retiro = double.Parse(Console.ReadLine());
+                    if (retiro > saldo)
+                    {
+                        Console.WriteLine("Fondos insuficientes. No se puede realizar el retiro.");
+                    }
+                    else if (retiro <= 0)
+                    {
+                        Console.WriteLine("La cantidad a retirar debe ser mayor a cero.");
+                    }
+                    else
+                    {
+                        saldo -= retiro;
+                        Console.WriteLine($"Retiro realizado con éxito. Saldo remanente: ${saldo}");
+                    }
+                    break;
+                case '2':
+                    Console.WriteLine($"El saldo de su cuenta es: ${saldo}");
+                    break;
+                case '3':
+                    Console.WriteLine("Operación cancelada. Gracias por utilizar nuestro cajero.");
+                    break;
+                default:
+                    Console.WriteLine("Opción no válida. Por favor, elija una opción correcta.");
+                    break;
+            }
+        } while (opcionCajero != '3');
+
+        // 1.24 Simulación "Temple Run"
+        Random random = new Random();
+        int vida = 12;
+
+        Console.WriteLine($"Vida inicial: {vida}");
+        while (vida > 0)
+        {
+            vida--; // Reducir vida por ciclo
+            Console.WriteLine($"Costo de ciclo: {vida}");
+
+            if (random.Next(2) == 1) // Castigo
+            {
+                vida -= 3;
+                Console.WriteLine($"Castigo: {vida}");
+            }
+
+            if (random.Next(2) == 1) // Premio
+            {
+                vida += 3;
+                Console.WriteLine($"Premio: {vida}");
+            }
+
+            Console.WriteLine($"Vida después del ciclo: {vida}");
+        }
+    }
+}
+
+//PRACTICA F
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Ejercicio 1
+        for (int i = 0; i <= 9; i++)
+        {
+            Console.Write(i + " , ");
+        }
+        Console.WriteLine();
+
+        for (int i = 9; i >= 0; i--)
+        {
+            Console.Write(i + " , ");
+        }
+        Console.WriteLine();
+
+        // Ejercicio 2
+        for (int i = 0; i <= 99; i++)
+        {
+            Console.Write(i + " , ");
+        }
+        Console.WriteLine();
+
+        // Ejercicio 3
+        for (int i = 1; i <= 100; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Console.Write(i + " , ");
+            }
+        }
+        Console.WriteLine();
+
+        // Ejercicio 4
+        Console.Write("Ingresa un rango máximo: ");
+        int maximo = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingresa un rango mínimo: ");
+        int minimo = int.Parse(Console.ReadLine());
+
+        for (int i = minimo; i <= maximo; i++)
+        {
+            Console.Write(i + " , ");
+        }
+        Console.WriteLine();
+
+        // Ejercicio 5
+        Console.Write("Ingresa un rango máximo: ");
+        int max = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingresa un rango mínimo: ");
+        int min = int.Parse(Console.ReadLine());
+
+        for (int i = max; i >= min; i--)
+        {
+            Console.Write(i + " , ");
+        }
+        Console.WriteLine();
+    }
+}
+
+//PRACTICA G
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] nombreMeses = { "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sept", "Oct", "Nov", "Dic" };
+        for (int i = 0; i < 12; i++)
+        {
+            Console.Write(nombreMeses[i] + ", ");
+        }
+        Console.WriteLine();
+
+        string[] planetas = { "Mercurio", "Venus", "Tierra", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno" };
+        for (int i = 0; i < 8; i++)
+        {
+            Console.Write(planetas[i] + ", ");
+        }
+        Console.WriteLine();
+    }
+}
+
+//PRACTICA I
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Declarar una matriz 2x2 e imprimir sus elementos
+        int[,] matriz = { { 1, 2 }, { 3, 4 } };
+        for (int i = 0; i <= 1; i++)
+        {
+            for (int j = 0; j <= 1; j++)
+            {
+                Console.Write(matriz[i, j]);
+            }
+            Console.WriteLine();
+        }
+
+        // Declarar un Sudoku 9x9 e imprimir sus elementos
+        int[,] Sudoku = {
+            {0, 3, 0, 0, 0, 0, 0, 0, 0},
+            {0, 2, 0, 9, 0, 6, 3, 0, 0},
+            {0, 6, 0, 4, 0, 2, 0, 9, 0},
+            {1, 0, 0, 0, 9, 0, 4, 0, 0},
+            {0, 0, 8, 1, 0, 3, 5, 0, 0},
+            {0, 0, 5, 0, 7, 0, 0, 0, 3},
+            {0, 5, 0, 3, 0, 1, 0, 6, 0},
+            {0, 0, 4, 6, 0, 7, 0, 3, 0},
+            {0, 0, 0, 0, 0, 0, 0, 8, 0}
+        };
+
+        for (int i = 0; i <= 8; i++) // Cambiado el límite del bucle para recorrer toda la matriz Sudoku
+        {
+            for (int j = 0; j <= 8; j++)
+            {
+                Console.Write(Sudoku[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+
